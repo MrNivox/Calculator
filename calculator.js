@@ -26,7 +26,7 @@ function Divide (x,y)
  return x / y
  
 }
-function Operate(x ,y ,sign)
+function Operate(x = "0000",y ,sign)
 {
    let result;
    if(sign ==  "+"){y = Additon(x,y)}
@@ -51,15 +51,15 @@ function Check() {
 
 function removeSign(str) {
 
-    return str.replace("*" | "/",'');
+    return str.replace("*" ,'').replace("/" ,'').replace("-" ,'').replace("+" ,'');
 }
 
 function removeLeadingZerosRegex(str) {
     return str.replace(/^0+(?=\d)/, '');
 }
 
- document.getElementById("/").onclick = function () {Sign = "/"; SignClick = true;tempDisplay = display.innerText ;display.innerText = "/"; Check()}
- document.getElementById("*").onclick = function () { Sign = "*";SignClick = true; tempDisplay = display.innerText ;display.innerText = "*"; Check()}
+ document.getElementById("/").onclick = function () {Sign = "/"; SignClick = true;tempDisplay = display.innerText ;display.innerText = "/"; Check();console.log(Operate(N1,N2, Sign))}
+ document.getElementById("*").onclick = function () {console.log(Operate(N1,N2, Sign));Sign = "*";SignClick = true; tempDisplay = display.innerText ;display.innerText = "*"; Check()}
  document.getElementById("-").onclick = function () {Sign = "-";SignClick = true;tempDisplay = display.innerText ;display.innerText = "-"; Check()}
  document.getElementById("+").onclick = function () {Sign = "+";SignClick = true;tempDisplay = display.innerText ;display.innerText = "+"; Check()}
  document.getElementById("=").onclick = function () {N2 = display.innerText ;console.log(Operate(N1,N2,Sign)) }
