@@ -1,5 +1,43 @@
 
 
+body {
+
+display: flex;
+
+justify-content: center;
+align-content: center;
+background-color:#DC223E;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 500px;
+
+
+    justify-content: center;
+    align-items: center;
+ 
+}
+.button{
+  width: 60px;
+  background-color: aqua;
+  cursor: pointer;
+}
+#clear{
+    width:50px;
+}
+
+.button:hover{
+    background-color: green;
+    
+  
+}
+#display {
+    height: 100px;
+    color: blue;
+}
 
 
 
@@ -9,11 +47,5 @@
 
 
 
-
-
-
-
-
-function
 
 

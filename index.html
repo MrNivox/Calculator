@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="calculator.js" defer></script>
+    <link rel="stylesheet" href="calculator.css">
 
 </head>
 <body>
 
+   
+    <div id="container"> 
     <input type="text" id="display" class="display" disabled>
-    <div id="buttons">
+     <div id="buttons">
 
         <Button class="button" onclick="appendNumber('1')">1</Button>
         <Button class="button" onclick="appendNumber('2')">2</Button>
@@ -22,18 +25,22 @@
         <Button class="button" onclick="appendNumber('8')">8</Button>
         <Button class="button" onclick="appendNumber('9')">9</Button>
         <Button class="button" onclick="appendNumber('0')">0</Button>
+     </div>
+     
+     <div id="operator buttons">
         <Button class="button equal" onclick="Calculate()">=</Button>
         <Button class="button operator" onclick="appendOperator('+')">+</Button>
         <Button class="button operator" onclick="appendOperator('-')">-</Button>
         <Button class="button operator" onclick="appendOperator('/')">/</Button>
         <Button class="button operator" onclick="appendOperator('*')">*</Button>
-        <Button class="buttonlear" onclick="Clear()">Clear</Button>
-        
-
-
-
-
+        <Button id="clear" class="button clear" onclick="Clear()">Clear</Button>
+     </div>
     </div>
+
+
+
+
+   
     
 </body>
 </html>
